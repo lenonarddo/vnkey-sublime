@@ -22,13 +22,13 @@ class StartVnKeyCommand(sublime_plugin.TextCommand):
 			# print(curr_pos,word_region,word)
 			final = self.key_send(word)
 			if not final: return False
-			# self.view.run_command("runchange", {"string":final})
 			self.view.replace(edit, word_region,final)
 			self.view.end_edit(edit)
 			return True
 	def key_send(self,word):
 		if ENABLEKEY:
 			word_after = process_sequence(word)
+			# Small fix "gía" => "giá". Can't fix completely (at this time) because of it comes from Bogo Engine.
 			if word_after == 'gía':
 				word_after = "giá"
 			if word_after == 'Gía':
@@ -42,6 +42,7 @@ class StartVnKeyCommand(sublime_plugin.TextCommand):
 		return False
 
 class ToggleVnCommentCommand(sublime_plugin.TextCommand):
+	# protected characters like `{}[]` from being converted to Vietnamese Characters.
 	def run(self, edit):
 		global ENABLEKEY
 		if ENABLEKEY:
