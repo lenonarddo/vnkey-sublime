@@ -6,7 +6,7 @@ The project is using Bogo Engine.
 - Safely toggle comments: protected characters like `{}[]` from being converted to Vietnamese Characters.
 # How to install 
 ```
-cd .config/sublime-text-3/Packages/
+cd $HOME/.config/sublime-text-3/Packages/
 git clone https://github.com/lenonarddo/vnkey-sublime
 ```
 You may need to restart Sublime Text.
