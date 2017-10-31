@@ -1,0 +1,9 @@
+[
+    {
+        "caption": "Start Vietnamese Keyboard",
+        "command": "start_vn_key",
+        "args": {
+            //"file": "${packages}/Terminal/Terminal.sublime-settings"
+        }
+    }
+]

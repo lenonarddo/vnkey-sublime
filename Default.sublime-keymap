@@ -1,0 +1,4 @@
+[
+    { "keys": ["f2"], "command": "control_vn_key" },
+    { "keys": ["ctrl+/"], "command": "toggle_vn_comment" },
+]
